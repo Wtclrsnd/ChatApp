@@ -20,6 +20,7 @@
 		723A41352707368000A7D0C7 /* VideoPlayerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 723A41342707368000A7D0C7 /* VideoPlayerViewController.swift */; };
 		723A4137270736B700A7D0C7 /* NewConversationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 723A4136270736B700A7D0C7 /* NewConversationViewController.swift */; };
 		723A4139270736E200A7D0C7 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 723A4138270736E200A7D0C7 /* ProfileViewController.swift */; };
+		723A413C27075CB400A7D0C7 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 723A413B27075CB400A7D0C7 /* Extensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,6 +39,7 @@
 		723A41342707368000A7D0C7 /* VideoPlayerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoPlayerViewController.swift; sourceTree = "<group>"; };
 		723A4136270736B700A7D0C7 /* NewConversationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewConversationViewController.swift; sourceTree = "<group>"; };
 		723A4138270736E200A7D0C7 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		723A413B27075CB400A7D0C7 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -122,6 +124,7 @@
 			children = (
 				723A4111270730C600A7D0C7 /* AppDelegate.swift */,
 				723A4113270730C600A7D0C7 /* SceneDelegate.swift */,
+				723A413B27075CB400A7D0C7 /* Extensions.swift */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -224,6 +227,7 @@
 				723A41352707368000A7D0C7 /* VideoPlayerViewController.swift in Sources */,
 				723A4137270736B700A7D0C7 /* NewConversationViewController.swift in Sources */,
 				723A412F270735A100A7D0C7 /* LoginViewController.swift in Sources */,
+				723A413C27075CB400A7D0C7 /* Extensions.swift in Sources */,
 				723A4114270730C600A7D0C7 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

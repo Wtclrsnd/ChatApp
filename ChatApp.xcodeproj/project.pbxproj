@@ -22,7 +22,8 @@
 		723A4137270736B700A7D0C7 /* NewConversationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 723A4136270736B700A7D0C7 /* NewConversationViewController.swift */; };
 		723A4139270736E200A7D0C7 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 723A4138270736E200A7D0C7 /* ProfileViewController.swift */; };
 		723A413C27075CB400A7D0C7 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 723A413B27075CB400A7D0C7 /* Extensions.swift */; };
-		729285812711FFBC0081EBC4 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 729285802711FFBC0081EBC4 /* GoogleService-Info.plist */; };
+		7292858327136DF70081EBC4 /* DatabaseManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7292858227136DF70081EBC4 /* DatabaseManager.swift */; };
+		729285852713731B0081EBC4 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 729285842713731A0081EBC4 /* GoogleService-Info.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -44,7 +45,8 @@
 		723A4136270736B700A7D0C7 /* NewConversationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewConversationViewController.swift; sourceTree = "<group>"; };
 		723A4138270736E200A7D0C7 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		723A413B27075CB400A7D0C7 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
-		729285802711FFBC0081EBC4 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		7292858227136DF70081EBC4 /* DatabaseManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatabaseManager.swift; sourceTree = "<group>"; };
+		729285842713731A0081EBC4 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
 		DF6700EDEA95820EBB83D5A3 /* Pods-ChatApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ChatApp.debug.xcconfig"; path = "Target Support Files/Pods-ChatApp/Pods-ChatApp.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -104,7 +106,7 @@
 				723A41292707319100A7D0C7 /* Views */,
 				723A41282707317C00A7D0C7 /* Controllers */,
 				723A4122270730CA00A7D0C7 /* Info.plist */,
-				729285802711FFBC0081EBC4 /* GoogleService-Info.plist */,
+				729285842713731A0081EBC4 /* GoogleService-Info.plist */,
 				723A411A270730C600A7D0C7 /* ChatApp.xcdatamodeld */,
 			);
 			path = ChatApp;
@@ -152,6 +154,7 @@
 				723A4111270730C600A7D0C7 /* AppDelegate.swift */,
 				723A4113270730C600A7D0C7 /* SceneDelegate.swift */,
 				723A413B27075CB400A7D0C7 /* Extensions.swift */,
+				7292858227136DF70081EBC4 /* DatabaseManager.swift */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -235,7 +238,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				723A4121270730CA00A7D0C7 /* LaunchScreen.storyboard in Resources */,
-				729285812711FFBC0081EBC4 /* GoogleService-Info.plist in Resources */,
+				729285852713731B0081EBC4 /* GoogleService-Info.plist in Resources */,
 				723A411E270730CA00A7D0C7 /* Assets.xcassets in Resources */,
 				723A4119270730C600A7D0C7 /* Main.storyboard in Resources */,
 			);
@@ -298,6 +301,7 @@
 				723A4131270735BF00A7D0C7 /* RegisterViewController.swift in Sources */,
 				723A41352707368000A7D0C7 /* VideoPlayerViewController.swift in Sources */,
 				723A4137270736B700A7D0C7 /* NewConversationViewController.swift in Sources */,
+				7292858327136DF70081EBC4 /* DatabaseManager.swift in Sources */,
 				723A412F270735A100A7D0C7 /* LoginViewController.swift in Sources */,
 				723A413C27075CB400A7D0C7 /* Extensions.swift in Sources */,
 				723A4114270730C600A7D0C7 /* SceneDelegate.swift in Sources */,

@@ -20,7 +20,7 @@ class RegisterViewController: UIViewController {
 
     private let imageView: UIImageView = {
         let imageView = UIImageView()
-        imageView.image = UIImage(systemName: "person")
+        imageView.image = UIImage(systemName: "person.circle")
         imageView.tintColor = .systemGray
         imageView.contentMode = .scaleAspectFit
         imageView.layer.masksToBounds = true
@@ -107,7 +107,7 @@ class RegisterViewController: UIViewController {
         title = "Log In"
         view.backgroundColor = .white
         
-        navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Register", style: .done, target: self, action: #selector(didTapRegister))
+//        navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Register", style: .done, target: self, action: #selector(didTapRegister))
         
         registerButton.addTarget(self, action: #selector(registerButtonTapped), for: .touchUpInside)
         
@@ -188,31 +188,46 @@ class RegisterViewController: UIViewController {
                   return
               }
         
+        DatabaseManager.shared.userExists(with: email, completion: {
+            [weak self] exists in
+            guard let strongSelf = self else {
+                return
+            }
+            guard !exists else {
+                strongSelf.alertUserLoginError(message: "User with this email is already exists")
+                return
+                //user exists
+            }
+        })
+        
         FirebaseAuth.Auth.auth().createUser(withEmail: email, password: password, completion: {
-            authResult, error in
-            guard let result = authResult, error == nil else {
+            [weak self] authResult, error in
+            guard let strongSelf = self else {
+                return
+            }
+            guard authResult != nil, error == nil else {
                 return
             }
             
-            let user = result.user
-            print("created user \(user)")
+            DatabaseManager.shared.insertUser(with: ChatAppUser(firstName: firstName, lastName: lastName, email: email))
+            strongSelf.navigationController?.dismiss(animated: true, completion: nil)
         })
     }
     
     
     //MARK: - Firebase login
-    func alertUserLoginError() {
-        let alert = UIAlertController(title: "Whoops", message: "Please enter all information to create an account", preferredStyle: .alert)
+    func alertUserLoginError(message: String = "Please enter all information to create an account") {
+        let alert = UIAlertController(title: "Whoops", message: message, preferredStyle: .alert)
         
         alert.addAction(UIAlertAction(title: "Dissmis", style: .cancel, handler: nil))
         present(alert, animated: true)
     }
     
-    @objc private func didTapRegister() {
-        let vc = RegisterViewController()
-        vc.title = "Create Account"
-        navigationController?.pushViewController(vc, animated: true)
-    }
+//    @objc private func didTapRegister() {
+//        let vc = RegisterViewController()
+//        vc.title = "Create Account"
+//        navigationController?.pushViewController(vc, animated: true)
+//    }
 
 }
 

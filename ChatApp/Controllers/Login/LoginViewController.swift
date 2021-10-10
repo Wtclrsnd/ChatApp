@@ -124,7 +124,10 @@ override func viewDidLayoutSubviews() {
     }
     
     FirebaseAuth.Auth.auth().signIn(withEmail: email, password: password, completion: {
-        authResult, error in
+        [weak self] authResult, error in
+        guard let strongSelf = self else {
+            return
+        }
         guard let result = authResult, error == nil else {
             print("failed to log in")
             return
@@ -132,6 +135,7 @@ override func viewDidLayoutSubviews() {
         }
         let user = result.user
         print("logged in \(user)")
+        strongSelf.navigationController?.dismiss(animated: true, completion: nil)
     })
 }
 

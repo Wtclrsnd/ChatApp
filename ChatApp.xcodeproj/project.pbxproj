@@ -12,7 +12,6 @@
 		723A4114270730C600A7D0C7 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 723A4113270730C600A7D0C7 /* SceneDelegate.swift */; };
 		723A4116270730C600A7D0C7 /* ConversationsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 723A4115270730C600A7D0C7 /* ConversationsViewController.swift */; };
 		723A4119270730C600A7D0C7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 723A4117270730C600A7D0C7 /* Main.storyboard */; };
-		723A411C270730C600A7D0C7 /* ChatApp.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 723A411A270730C600A7D0C7 /* ChatApp.xcdatamodeld */; };
 		723A411E270730CA00A7D0C7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 723A411D270730CA00A7D0C7 /* Assets.xcassets */; };
 		723A4121270730CA00A7D0C7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 723A411F270730CA00A7D0C7 /* LaunchScreen.storyboard */; };
 		723A412F270735A100A7D0C7 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 723A412E270735A100A7D0C7 /* LoginViewController.swift */; };
@@ -34,7 +33,6 @@
 		723A4113270730C600A7D0C7 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		723A4115270730C600A7D0C7 /* ConversationsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConversationsViewController.swift; sourceTree = "<group>"; };
 		723A4118270730C600A7D0C7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		723A411B270730C600A7D0C7 /* ChatApp.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = ChatApp.xcdatamodel; sourceTree = "<group>"; };
 		723A411D270730CA00A7D0C7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		723A4120270730CA00A7D0C7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		723A4122270730CA00A7D0C7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -107,7 +105,6 @@
 				723A41282707317C00A7D0C7 /* Controllers */,
 				723A4122270730CA00A7D0C7 /* Info.plist */,
 				729285842713731A0081EBC4 /* GoogleService-Info.plist */,
-				723A411A270730C600A7D0C7 /* ChatApp.xcdatamodeld */,
 			);
 			path = ChatApp;
 			sourceTree = "<group>";
@@ -171,8 +168,8 @@
 		723A413A270754BC00A7D0C7 /* Login */ = {
 			isa = PBXGroup;
 			children = (
-				723A4130270735BF00A7D0C7 /* RegisterViewController.swift */,
 				723A412E270735A100A7D0C7 /* LoginViewController.swift */,
+				723A4130270735BF00A7D0C7 /* RegisterViewController.swift */,
 			);
 			path = Login;
 			sourceTree = "<group>";
@@ -294,7 +291,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				723A4116270730C600A7D0C7 /* ConversationsViewController.swift in Sources */,
-				723A411C270730C600A7D0C7 /* ChatApp.xcdatamodeld in Sources */,
 				723A4139270736E200A7D0C7 /* ProfileViewController.swift in Sources */,
 				723A4112270730C600A7D0C7 /* AppDelegate.swift in Sources */,
 				723A4133270735F500A7D0C7 /* PhotoViewerViewController.swift in Sources */,
@@ -457,6 +453,8 @@
 				DEVELOPMENT_TEAM = P99KL2FGYB;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = ChatApp/Info.plist;
+				INFOPLIST_KEY_NSCameraUsageDescription = "Please allow access to take profile photo";
+				INFOPLIST_KEY_NSPhotoLibraryAddUsageDescription = "Please allow access to select your photo for profile";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -488,6 +486,8 @@
 				DEVELOPMENT_TEAM = P99KL2FGYB;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = ChatApp/Info.plist;
+				INFOPLIST_KEY_NSCameraUsageDescription = "Please allow access to take profile photo";
+				INFOPLIST_KEY_NSPhotoLibraryAddUsageDescription = "Please allow access to select your photo for profile";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -530,19 +530,6 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
-
-/* Begin XCVersionGroup section */
-		723A411A270730C600A7D0C7 /* ChatApp.xcdatamodeld */ = {
-			isa = XCVersionGroup;
-			children = (
-				723A411B270730C600A7D0C7 /* ChatApp.xcdatamodel */,
-			);
-			currentVersion = 723A411B270730C600A7D0C7 /* ChatApp.xcdatamodel */;
-			path = ChatApp.xcdatamodeld;
-			sourceTree = "<group>";
-			versionGroupType = wrapper.xcdatamodel;
-		};
-/* End XCVersionGroup section */
 	};
 	rootObject = 723A4106270730C600A7D0C7 /* Project object */;
 }

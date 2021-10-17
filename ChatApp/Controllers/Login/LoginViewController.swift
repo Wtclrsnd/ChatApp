@@ -9,10 +9,14 @@ import UIKit
 import FirebaseAuth
 import FBSDKLoginKit
 import GoogleSignIn
+import JGProgressHUD
 
 class LoginViewController: UIViewController {
     
     //MARK: - UI
+    
+    private let spinner = JGProgressHUD(style: .dark)
+    
     private let scrollView: UIScrollView = {
         let scrollView = UIScrollView()
         scrollView.clipsToBounds = true
@@ -86,9 +90,9 @@ class LoginViewController: UIViewController {
         view.backgroundColor = .white
         
         loginObserver = NotificationCenter.default.addObserver(forName: Notification.Name.didLogInNotification,
-                                               object: nil,
-                                               queue: .main,
-                                               using: { [weak self] _ in
+                                                               object: nil,
+                                                               queue: .main,
+                                                               using: { [weak self] _ in
             guard let strongSelf = self else {
                 return
             }
@@ -149,9 +153,9 @@ class LoginViewController: UIViewController {
                                            width: scrollView.width - 60,
                                            height: 52)
         googleLoginButton.frame = CGRect(x: 30,
-                                           y: facebookLoginButton.bottom+10,
-                                           width: scrollView.width - 60,
-                                           height: 52)
+                                         y: facebookLoginButton.bottom+10,
+                                         width: scrollView.width - 60,
+                                         height: 52)
     }
     
     
@@ -166,11 +170,18 @@ class LoginViewController: UIViewController {
             return
         }
         
+        spinner.show(in: view)
+        
         FirebaseAuth.Auth.auth().signIn(withEmail: email, password: password, completion: {
             [weak self] authResult, error in
             guard let strongSelf = self else {
                 return
             }
+            
+            DispatchQueue.main.async {
+                strongSelf.spinner.dismiss(animated: true)
+            }
+            
             guard let result = authResult, error == nil else {
                 print("failed to log in")
                 return

@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		2EB267F55CD8A6E5A2A6E64C /* Pods_ChatApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2258D55954887940ADED7FF2 /* Pods_ChatApp.framework */; };
 		720A25D6271A2CA100B32C8C /* ChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 720A25D5271A2CA000B32C8C /* ChatViewController.swift */; };
+		720A25D8271CBBC100B32C8C /* StorageManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 720A25D7271CBBC100B32C8C /* StorageManager.swift */; };
 		723A4112270730C600A7D0C7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 723A4111270730C600A7D0C7 /* AppDelegate.swift */; };
 		723A4114270730C600A7D0C7 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 723A4113270730C600A7D0C7 /* SceneDelegate.swift */; };
 		723A4116270730C600A7D0C7 /* ConversationsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 723A4115270730C600A7D0C7 /* ConversationsViewController.swift */; };
@@ -30,6 +31,7 @@
 		2258D55954887940ADED7FF2 /* Pods_ChatApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ChatApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		3679F3E13CFBF501E408F972 /* Pods-ChatApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ChatApp.release.xcconfig"; path = "Target Support Files/Pods-ChatApp/Pods-ChatApp.release.xcconfig"; sourceTree = "<group>"; };
 		720A25D5271A2CA000B32C8C /* ChatViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatViewController.swift; sourceTree = "<group>"; };
+		720A25D7271CBBC100B32C8C /* StorageManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StorageManager.swift; sourceTree = "<group>"; };
 		723A410E270730C600A7D0C7 /* ChatApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ChatApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		723A4111270730C600A7D0C7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		723A4113270730C600A7D0C7 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -155,6 +157,7 @@
 				723A4113270730C600A7D0C7 /* SceneDelegate.swift */,
 				723A413B27075CB400A7D0C7 /* Extensions.swift */,
 				7292858227136DF70081EBC4 /* DatabaseManager.swift */,
+				720A25D7271CBBC100B32C8C /* StorageManager.swift */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -323,6 +326,7 @@
 				723A413C27075CB400A7D0C7 /* Extensions.swift in Sources */,
 				720A25D6271A2CA100B32C8C /* ChatViewController.swift in Sources */,
 				723A4114270730C600A7D0C7 /* SceneDelegate.swift in Sources */,
+				720A25D8271CBBC100B32C8C /* StorageManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
